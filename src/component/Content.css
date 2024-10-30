@@ -1,19 +1,26 @@
 .content-form-container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 .content-input-title{
     margin: 0 0 8px 0;
+    font-weight: 600;
 }
 .content-title{
+    margin: 0;
     margin-bottom: 24px;
+    font-weight: 600;
     overflow: hidden;
     text-wrap: nowrap;
     text-overflow: ellipsis;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: #2E3238;
 }
 .padding-form{
-    padding: 0 16px;
+    padding: 16px;
+    padding-top: 0;
 }
 .item9{
     grid-column: 1 / 3;
@@ -22,10 +29,15 @@
     grid-column: 1 / 3;
 }
 input[type='date']{
-    width: 32px;
-    padding: 7px;
+    margin-left: 5px;
 }
-.input-buttons-conteiner{
+input[type='date']::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+input[type='date']::-webkit-datetime-edit{
+    display: none;
+}
+.input-buttons-container{
     display: flex;
     gap: 4px;
 }
@@ -35,6 +47,27 @@ input[type='date']{
     }
     .content-form-container>div{
         margin-bottom: 16px;
+    }
+}
+.cebab-button{
+    display: none;
+}
+.cebab-button-text{
+    width: 27px;
+    height: 29px;
+    rotate: 90deg;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #2E3238;
+}
+@media screen and (max-width: 767px){
+    .button_conteiner button{
+        display: none;
+    }
+    .cebab-button{
+        display: flex;
     }
 }
 .tag-item{
@@ -47,20 +80,23 @@ input[type='date']{
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
+    min-width: 0;
 }
-.tags-conteiner{
+.tags-container{
     position: relative;
     padding: 3px;
     gap: 4px;
     flex-wrap: wrap;
     height: auto;
-    padding-right: 29px;
+    padding-right: 50px;
+    flex: 1 1;
+    min-width: 0;
+    place-self: flex-start;
+    min-height: 32px;
 }
 .tag-close{
     cursor: pointer;
-}
-.tag-item span{
-    margin-bottom: 3px;
 }
 .micro-cross{
     position: absolute;
@@ -70,7 +106,80 @@ input[type='date']{
 }
 .plus{
     height: 32px;
-    line-height: 25px;
+    line-height: 30px;
     font-size: 25px;
     color: #2E3238;
+}
+.subtask-title{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    display: inline;
+    margin-right: 16px;
+}
+button{
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 6px 12px;
+    border: 1px solid #D5D8DD;
+    background-color: white;
+    cursor: pointer;
+}
+.subHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    position: sticky;
+    top: 51px;
+    background-color: white;
+    z-index: 2;
+}
+.save-button{
+    margin-right: 4px;
+    background-color: #0078CF;
+    color: white;
+    border: 0;
+}
+.dropDown-container{
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    padding: 5px;
+    border: 1px solid #D5D8DD;
+    border-radius: 4px;
+    gap: 5px;
+    background-color: #FCFCFD;
+    flex-wrap: wrap;
+    max-width: 180px;
+    max-height: 150px;
+    overflow-x: overlay;
+    justify-content: center;
+    align-items: center;
+}
+.dropDown-container:has(input){
+    padding: 0;
+    padding-left: 5px;
+    max-height: 32px;
+}
+.dropDown-container::-webkit-scrollbar{
+    display: none;
+}
+.subHeader .dropDown-container{
+    flex-direction: column;
+}
+.subHeader-shadow{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04);
+}
+@media screen and (min-width: 767px){
+    .subHeader .dropDown-container{
+        display: none !important;
+    }
+}
+.tag-text{
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+.content-container{
+    background-color: white;
 }

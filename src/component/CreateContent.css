@@ -1,0 +1,41 @@
+.modal-window{
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.modal-window-conteiner::-webkit-scrollbar{
+    display: none;
+}
+.modal-window-conteiner{
+    width: 100%;
+    padding: 16px;
+    background-color: #0b0c0ea8;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    overflow: scroll;
+    height: 100vh;
+    
+}
+.modal-window-conteiner .content-form-container{
+    display: block;
+}
+.modal-window-conteiner .content-form-container>div {
+    margin-bottom: 16px;
+}
+.modal-window-conteiner .subHeader{
+    padding: 24px;
+    position: relative;
+    top:0
+}
+.modal-window-conteiner .content-title{
+    margin: 0;
+    margin-bottom: 16px;
+}
+.modal-window-conteiner .dropDown-container{
+    position: relative;
+    top: 0 !important;
+    right:0 !important;
+}

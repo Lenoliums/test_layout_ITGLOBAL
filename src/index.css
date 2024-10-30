@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.input-conteiner{
+.input-container{
   border: 1px solid #D5D8DD;
   border-radius: 4px;
   display: flex;
@@ -29,7 +29,10 @@ input{
   height: 32px;
   outline: 0;
 }
-.conteiner-settings{
+input[type="date"], input[type="date"] * {
+  cursor: pointer;
+}
+.container-settings{
   border: 1px solid #D5D8DD;
   border-radius: 4px;
   height: 32px;
@@ -37,6 +40,12 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   flex: none;
+  cursor: pointer;
+}
+*{
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }

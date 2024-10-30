@@ -7,21 +7,21 @@ import settings from '../pictures/settings.png'
 
 function Header() {
     return (
-        <header className="header flex-space_between-conteiner">
-          <div className="logo-conteiner">
+        <header className="header flex-space_between-container">
+          <div className="logo-container">
             <img src={logo} className="logo" alt="logo"/>
             <img src={logoO} className="logo-O" alt="logo"/>
           </div>
           
-          <div className='conteiner-search-avatar-settings flex-space_between-conteiner'>
-                <div className='input-conteiner header-input-conteiner'>
+          <div className='container-search-avatar-settings flex-space_between-container'>
+                <div className='input-container header-input-container'>
                     <input type='text' className='header-input' placeholder='Поиск'/>
                     <img src={search} className="input-img" alt="search"/>
                 </div>
-                <div className='conteiner-avatar-settings flex-space_between-conteiner'>
+                <div className='container-avatar-settings flex-space_between-container'>
                     <img src={avatar} className="avatar-img" alt="avatar"/>
                     <span>Имя Фамилия</span>
-                    <div className='conteiner-settings'>
+                    <div className='container-settings'>
                         <img src={settings} alt="settings"/>
                     </div>
                 </div>

@@ -4,13 +4,17 @@
 header{
     padding: 8px 16px;
     border-bottom: 1px solid #D5D8DD;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
 }
-.flex-space_between-conteiner{
+.flex-space_between-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo-conteiner{
+.logo-container{
     position: relative;
     display: flex;
     align-items: baseline;
@@ -28,7 +32,7 @@ header{
     width: 32px;
     border-radius: 50%;
 }
-.header-input-conteiner{
+.header-input-container{
     width: 300px;
   }
 .header-input::placeholder{
@@ -38,23 +42,23 @@ header{
     height: 24px;
     margin: 6px 8px 0 0;
 }
-.conteiner-search-avatar-settings{
+.container-search-avatar-settings{
     gap: 20px
 }
-.conteiner-avatar-settings{
+.container-avatar-settings{
     gap: 15px;
 }
-.conteiner-avatar-settings span{
+.container-avatar-settings span{
     line-height: 34px;
 }
 @media screen and (max-width: 767px){
-    .logo-conteiner{
+    .logo-container{
         display: none;
     }
-    .header-input-conteiner{
+    .header-input-container{
         display: none;
     }
-    .conteiner-avatar-settings span{
+    .container-avatar-settings span{
         display: none;
     }
 }
