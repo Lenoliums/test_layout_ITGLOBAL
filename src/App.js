@@ -58,19 +58,18 @@ const subtaskContent = new subtask(
   ['Андрей Пивоваров'],
   ['Андрей Пивоваров'])
 const emptySubtask = new subtask()
-const productSet = ['Platform', 'Application', 'Smt very very strange']
-const personTags = ['worker1', 'worker2', 'worker3', 'worker4', 'worker5', 'worker6']
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   let closeModal = ()=>{setIsModalOpen(false)}
   let openModal = ()=>{setIsModalOpen(true)}
   return (
-
     <div>
       <Header/>
-      <Navigator/>
-      <Content content={subtaskContent} openModal={openModal}/>
+      <div className='flex-conteiner'>
+        <Navigator/>
+        <Content content={subtaskContent} openModal={openModal}/>
+      </div>
       <CreateContent content={emptySubtask} open={isModalOpen} closeModal={closeModal}/>
     </div>
     

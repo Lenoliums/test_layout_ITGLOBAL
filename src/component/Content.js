@@ -2,6 +2,7 @@ import "./Content.css";
 import { useRef, useEffect, useState, useId} from "react";
 import search from '../pictures/contentSearch.png';
 import cross from '../pictures/micro-cross.png';
+import bigCross from '../pictures/close.png';
 
 const productSet = ['Platform', 'Application', 'Smt very very strange']
 const personTags = ['worker1', 'worker2', 'worker3', 'worker4', 'worker5', 'worker6']
@@ -173,7 +174,6 @@ function DropDown(prop){
             prop.close()
         }
     }
-    // console.log(prop.elRef.current?.offsetTop, prop.elRef.current?.offsetHeight, window.screen.availHeight, '150', prop.elRef.current?.offsetTop+prop.elRef.current?.offsetHeight+150>window.screen.availHeight)
     return(
         prop.open && <div className="dropDown-container" 
         id={id}
@@ -209,7 +209,9 @@ function Content(prop) {
                     {buttons[2]}
                 </div>
                 <div className="container-settings cebab-button" onClick={()=>{setIsOpen(true)}}  ref={buttonRef}>
-                        <div className="cebab-button-text">...</div>
+                        {
+                            prop.isModal ? <img src={bigCross} onClick={prop.closeModal}/>: <div className="cebab-button-text">...</div> 
+                        }  
                 </div>
                 
                 <DropDown open={isOpen} elRef={buttonRef} close={close}>

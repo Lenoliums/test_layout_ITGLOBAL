@@ -34,6 +34,7 @@ header{
 }
 .header-input-container{
     width: 300px;
+    padding-right: 0;
   }
 .header-input::placeholder{
     color: #D5D8DD;

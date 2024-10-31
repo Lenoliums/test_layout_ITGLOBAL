@@ -132,7 +132,7 @@ button{
     position: sticky;
     top: 51px;
     background-color: white;
-    z-index: 2;
+    z-index: 1;
 }
 .save-button{
     margin-right: 4px;
@@ -182,4 +182,5 @@ button{
 }
 .content-container{
     background-color: white;
+    min-width: 0;
 }
