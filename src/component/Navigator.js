@@ -1,9 +1,8 @@
 import './Navigator.css';
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import navPanelClose from '../pictures/navPanelClose.svg';
 import navPanelOpen from '../pictures/navPanelOpen.svg';
 import star from '../pictures/star.svg';
-import keepOn from '../pictures/keep_20dp_5F6368_FILL0_wght400_GRAD0_opsz20.png';
 import keepOf from '../pictures/keep_off_20dp_5F6368_FILL0_wght400_GRAD0_opsz20.png';
 const treePanelCont=['Моя работа', 'Структура портала','Личное расписание','Отсутствие на рабочем месте','Портфель услуг','Дашборды','Доски задач']
 
