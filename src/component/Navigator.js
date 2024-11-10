@@ -18,8 +18,8 @@ function Navigator() {
           {isOpen && <div className={'tree-panel static-pose'}>
            <div className='nav-header'>
             <input placeholder='Поиск по меню' className='input-container'/>
-            <div className='container-settings'>
-              <img className="tree-panel-pin" onClick={()=>{setIsOpen(false)}}  src={keepOf} alt="open nav-tree"/>
+            <div className='container-settings' onClick={()=>{setIsOpen(false)}}>
+              <img className="tree-panel-pin" src={keepOf} alt="open nav-tree"/>
             </div>
            </div>
            <div className='nav-content'>
